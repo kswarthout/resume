@@ -147,7 +147,11 @@
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
-          "options": {}
+          "options": {
+            "baseHref": "https://kswarthout.github.io/resume/",
+            "name": "Kari Portfolio",
+            "email": "kari.swarthout@gmail.com"
+          }
         }
       }
     }

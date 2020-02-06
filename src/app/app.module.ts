@@ -1,5 +1,9 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
@@ -18,8 +22,12 @@ import { ProjectsComponent } from './projects/projects.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    FontAwesomeModule,
     TooltipModule.forRoot(),
     CarouselModule.forRoot(),
+    ButtonsModule.forRoot(),
     AppRoutingModule
   ],
   providers: [],

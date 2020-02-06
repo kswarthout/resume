@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  public landingMessage: string = `Hi! I'm Kari Swarthout, a full-stack developer living in Hsinchu, Taiwan. I design and build web, mobile, and desktop applications. I have a passion for cloud development, and am currently seeking a position that would allow me to work with these technologies.`;
+  public landingMessage: string = `I'm Kari, a full-stack developer living in Hsinchu, Taiwan. I create web, mobile and desktop applications. I have some experience working with cloud technologies, including designing solutions for, and deploying to a cloud environment. I am currently seeking a position that will allow me to gain more experience working with these technologies, and am passionate in this pursuit.`;
 
   constructor() { }
 

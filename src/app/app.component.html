@@ -1,20 +1,81 @@
-<div class="container-fluid">
+<div class="container-fluid"
+     style="padding:0;">
 
   <!-- NAV -->
-  <ul class="nav justify-content-center">
-    <li class="nav-item">
-      <a class="nav-link active"
-         routerLink="/">Overview</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link"
-         routerLink="/projects">Projects</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link"
-         routerLink="/contact">Contact</a>
-    </li>
-  </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark elevation-z6"
+       style="background-color: #3f51b5;">
+
+    <!-- NAV TOGGLER -->
+    <button class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarToggler"
+            aria-controls="navbarToggler"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- SITE NAV -->
+    <div class="collapse navbar-collapse"
+         id="navbarToggler">
+      <a class="navbar-brand"
+         href="#">Kari Swarthout</a>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link"
+             [routerLinkActive]="['active']"
+             [routerLinkActiveOptions]="{exact:true}"
+             [routerLink]="['/']">Main</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+             [routerLinkActive]="['active']"
+             [routerLinkActiveOptions]="{exact:true}"
+             [routerLink]="['/projects']">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+             [routerLinkActive]="['active']"
+             [routerLinkActiveOptions]="{exact:true}"
+             [routerLink]="['/contact']">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- EXTERNAL LINKS -->
+    <div class="btn-group form-inline my-2 my-lg-0">
+      <a class="btn btn-outline-light"
+         tabindex="-1"
+         role="button"
+         href="mailto: kari.swarthout@gmail.com"
+         placement="bottom"
+         tooltip="Send me an email!"
+         [delay]="600">
+        <fa-icon [icon]="faPaperPlane"></fa-icon>
+      </a>
+      <a class="btn btn-outline-light"
+         tabindex="-1"
+         role="button"
+         href="https://github.com/kswarthout"
+         target="_blank"
+         placement="bottom"
+         tooltip="Open GitHub"
+         [delay]="600">
+        <fa-icon [icon]="faGithub"></fa-icon>
+      </a>
+      <a class="btn btn-outline-light"
+         tabindex="-1"
+         role="button"
+         href="https://www.linkedin.com/in/kariswarthout/"
+         target="_blank"
+         placement="left"
+         tooltip="Open LinkedIn"
+         [delay]="600">
+        <fa-icon [icon]="faLinkedin"></fa-icon>
+      </a>
+    </div>
+  </nav>
 
   <router-outlet></router-outlet>
 
