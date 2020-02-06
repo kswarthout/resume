@@ -19,7 +19,7 @@ export class ContactComponent implements OnInit {
 
   public contact: Contact = {
     name: '',
-    email: 'kari.swarthout@gmail.com',
+    email: '',
     website: '',
     phone: '',
     message: ''
