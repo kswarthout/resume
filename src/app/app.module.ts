@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AlertModule } from 'ngx-bootstrap/alert';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
@@ -24,6 +25,7 @@ import { ProjectsComponent } from './projects/projects.component';
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    AlertModule.forRoot(),
     FontAwesomeModule,
     TooltipModule.forRoot(),
     CarouselModule.forRoot(),

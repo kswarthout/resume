@@ -17,6 +17,12 @@ export interface Contact {
 })
 export class ContactComponent implements OnInit {
 
+  emailRequiredAlert: any = { type: 'warning', msg: `Email is required.` };
+  successAlert: any = { type: 'success', msg: `Success! Message has been sent.` };
+  errorAlert: any = { type: 'danger', msg: `Oops! Something went wrong. Message has not been sent.` };
+  public alert: any;
+  public submitMsg: string = 'Submit';
+  public isWorking: boolean = false;
   public contact: Contact = {
     name: '',
     email: '',
@@ -25,21 +31,37 @@ export class ContactComponent implements OnInit {
     message: ''
   };
 
+
+
   constructor(private email: EmailService) { }
 
   ngOnInit() {
   }
 
   onSubmit() {
-    console.log('submit clicked');
+    if (this.contact.email === '') {
+      this.alert = this.emailRequiredAlert;
+      return;
+    }
+    this.alert = null;
+    this.isWorking = true;
+    this.submitMsg = 'Sending...';
     this.email.sendContact(this.contact).subscribe(
       data => {
-        console.log(data);
+        this.isWorking = false;
+        this.alert = this.successAlert;
+        this.submitMsg = 'Submit';
       },
       error => {
-        console.log(error);
+        this.isWorking = false;
+        this.alert = this.errorAlert;
+        this.submitMsg = 'Submit';
       }
     )
+  }
+
+  onAlertClosed(): void {
+    this.alert = null;
   }
 
 }

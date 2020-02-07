@@ -1,3 +1,8 @@
+<alert *ngIf="alert"
+       [type]="alert.type"
+       [dismissible]="true"
+       (onClosed)="onAlertClosed()">{{ alert.msg }}</alert>
+
 <div class="row justify-content-center"
      style="margin-top: 100px;">
     <div class="col"></div>
@@ -11,17 +16,24 @@
                        class="form-control"
                        id="name"
                        [ngModelOptions]="{standalone: true}"
-                       [(ngModel)]="contact.name">
+                       [(ngModel)]="contact.name"
+                       [disabled]="isWorking">
             </div>
             <div class="form-group">
                 <label for="email">Email *</label>
                 <input type="email"
+                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
                        class="form-control"
                        id="email"
                        [ngModelOptions]="{standalone: true}"
                        [(ngModel)]="contact.email"
                        required
-                       #email="ngModel">
+                       #email="ngModel"
+                       [disabled]="isWorking">
+                <div [hidden]="email.valid || email.pristine || !email.touched || isWorking"
+                     class="alert alert-danger">
+                    Email is invalid
+                </div>
             </div>
             <div class="form-group">
                 <label for="website">Website</label>
@@ -29,7 +41,8 @@
                        class="form-control"
                        id="website"
                        [ngModelOptions]="{standalone: true}"
-                       [(ngModel)]="contact.website">
+                       [(ngModel)]="contact.website"
+                       [disabled]="isWorking">
             </div>
             <div class="form-group">
                 <label for="phone">Phone</label>
@@ -37,21 +50,29 @@
                        class="form-control"
                        id="phone"
                        [ngModelOptions]="{standalone: true}"
-                       [(ngModel)]="contact.phone">
+                       [(ngModel)]="contact.phone"
+                       [disabled]="isWorking">
             </div>
             <div class="form-group">
                 <label for="message">Message</label>
                 <textarea class="form-control"
                           id="message"
                           [ngModelOptions]="{standalone: true}"
-                          [(ngModel)]="contact.message">
+                          [(ngModel)]="contact.message"
+                          [disabled]="isWorking">
 
                    </textarea>
             </div>
             <button type="submit"
                     class="btn btn-danger"
                     (click)="onSubmit()"
-                    [disabled]="email.invalid">Submit</button>
+                    [disabled]="isWorking">
+                <span *ngIf="isWorking"
+                      class="spinner-border spinner-border-sm"
+                      role="status"
+                      aria-hidden="true"></span>
+                {{submitMsg}}
+            </button>
         </form>
 
 
