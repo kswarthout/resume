@@ -2,16 +2,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
-import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { LandingComponent } from './landing/landing.component';
+import { ProjectComponent } from './project/project.component';
 import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ProjectsComponent } from './projects/projects.component';
     AppComponent,
     ProjectsComponent,
     ContactComponent,
-    LandingComponent
+    LandingComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
@@ -28,9 +30,9 @@ import { ProjectsComponent } from './projects/projects.component';
     AlertModule.forRoot(),
     FontAwesomeModule,
     TooltipModule.forRoot(),
-    CarouselModule.forRoot(),
     ButtonsModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
