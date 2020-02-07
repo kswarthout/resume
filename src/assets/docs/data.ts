@@ -1,6 +1,12 @@
 export const content = {
     projects: [
         {
+            title: 'Recipe Management Web App | Dave Cooks',
+            description: `I am currently developing a recipe management web application using the Angular framework for the frontend, and Google Firebase for the backend. The design for this app is inspired by my father, who requested an app that would allow him to store all his recipes in one place. A work still in progress, when complete user’s will be able to authenticate using an email and password, or existing social account. The app will allow users to enter new recipes, then view or share with friends.`,
+            technologies: `Typescript, HTML / SCSS, Firebase, Git / GitHub`,
+            repo: ''
+        },
+        {
             title: 'Time & Expense Entry Web Suite | Olympic Systems',
             description: `Rewrote a time and expense entry system converting it from a deprecated Silverlight-based implementation to the Angular framework. Along with another developer, I helped migrate existing data services to a C# Web API. I used the Angular framework to convert the frontend, and used NGXS to implement a Redux pattern for state management.`,
             technologies: `C#, Typescript, HTML SCSS, SQL, Angular, Git / GitHub`,
