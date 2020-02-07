@@ -1,62 +1,46 @@
 <div class="container-fluid"
      style="padding:0;">
 
-    <div class="row elevation-z6"
-         style="padding-top: 24px; padding-bottom: 24px; background: #3F51B5; color:#fff;">
-        <div class="col"></div>
-        <div class="col-10"
-             style="max-width: 850px;">
-
-            <div class="row">
-                <h4>Hello!</h4>
-                <p style="margin: 0;">{{landingMessage}}</p>
-                <p></p>
-            </div>
+    <div class="row justify-content-center elevation-z6"
+         style="padding-top: 24px; padding-bottom: 24px; background: #3F51B5; color:#fff; margin-top: 55px;">
+        <div class="col"
+             style="max-width: 850px; margin: 24px;">
+            <h4>Hello!</h4>
+            <p style="margin: 0;">{{landingMessage}}</p>
+            <p></p>
         </div>
-        <div class="col"></div>
     </div>
 
-    <div class="row"
+    <div class="row justify-content-center"
          style="padding-top: 24px;">
-        <div class="col"></div>
-        <div class="col-10"
-             style="max-width: 850px;">
-            <div class="row">
-                <div class="col">
-                    <div class="content__card elevation-z6">
-                        <h5>Resume / CV</h5>
-                        <hr>
-                        <p>Looking for a traditional resume? View online or download a pdf
-                            version using the links
-                            below.</p>
-                        <div>
-                            <a href="https://kswarthout.github.io/cv/"
-                               target="_blank"
-                               type="button"
-                               class="btn btn-outline-primary"
-                               style="margin: 8px;">View Online</a>
-                            <a href="assets/docs/resume.pdf"
-                               target="_blank"
-                               type="button"
-                               class="btn btn-outline-primary"
-                               style="margin: 8px;">View PDF</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="content__card elevation-z6">
-                        <h5>Projects</h5>
-                        <hr>
-                        <p>Explore some of my previous coding projects.</p>
-                        <a routerLink="/projects"
-                           type="button"
-                           class="btn btn-outline-primary"
-                           style="margin: 8px;">View Projects</a>
-                    </div>
-                </div>
+        <div class="col-sm-5 col-md-4 col-12 content__card elevation-z6">
+            <h5>Resume / CV</h5>
+            <hr>
+            <p>Looking for a traditional resume? View online or download a pdf
+                version using the links
+                below.</p>
+            <div>
+                <a href="https://kswarthout.github.io/cv/"
+                   target="_blank"
+                   type="button"
+                   class="btn btn-outline-primary"
+                   style="margin: 8px;">View Online</a>
+                <a href="assets/docs/resume.pdf"
+                   target="_blank"
+                   type="button"
+                   class="btn btn-outline-primary"
+                   style="margin: 8px;">View PDF</a>
             </div>
         </div>
-        <div class="col"></div>
+        <div class="col-sm-5 col-md-4 col-12 content__card elevation-z6">
+            <h5>Projects</h5>
+            <hr>
+            <p>Explore some of my previous coding projects.</p>
+            <a routerLink="/projects"
+               type="button"
+               class="btn btn-outline-primary"
+               style="margin: 8px;">View Projects</a>
+        </div>
     </div>
 
 </div>
