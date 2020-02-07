@@ -1,12 +1,11 @@
-<alert *ngIf="alert"
-       [type]="alert.type"
-       [dismissible]="true"
-       (onClosed)="onAlertClosed()">{{ alert.msg }}</alert>
-
 <div class="row justify-content-center align-items-center"
-     style="margin:16px; margin-top: 85px;">
+     style="margin:16px; margin-top: 105px;">
     <div class="col"
          style="max-width: 400px;">
+        <alert *ngIf="alert"
+               [type]="alert.type"
+               [dismissible]="true"
+               (onClosed)="onAlertClosed()">{{ alert.msg }}</alert>
         <h4 style="margin-bottom: 16px;">Let's get in touch!</h4>
         <form class="elevation-z6"
               style="background: #fff; border-radius: 5px; padding: 16px;">
