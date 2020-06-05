@@ -1,0 +1,27 @@
+.card-body {
+    padding: 36px;
+
+    h5 {
+        text-transform: uppercase;
+        color: #3f51b5;
+        font-size: 1.2em;
+        font-weight: 600;
+        letter-spacing: .005em;
+    }
+
+    h6 {
+        color: #797878 !important;
+        font-size: .92em;
+        font-weight: 400;
+        text-transform: capitalize;
+    }
+}
+
+.action__container {
+    display: flex;
+    flex-direction: column;
+
+    a {
+        margin-top: 8px;
+    }
+}

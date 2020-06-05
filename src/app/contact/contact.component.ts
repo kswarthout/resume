@@ -19,8 +19,7 @@ export class SafeHtmlPipe implements PipeTransform {
 })
 export class ContactComponent {
 
-  public welcomeMessage = `<h4 style="margin-bottom: 16px;">Let's get in touch!</h4>
-                          <p>If you are interested in working with me, or want more information
+  public welcomeMessage = `<p>If you are interested in working with me, or want more information
                           about my work, I would love to hear from you. You can contact me using any
                           of the methods below:</p>`
   public faPaperPlane = faPaperPlane;

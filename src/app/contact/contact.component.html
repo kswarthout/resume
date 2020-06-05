@@ -1,47 +1,50 @@
-<div class="row justify-content-center align-items-center"
-     style="margin:16px; margin-top: 150px;">
-    <div class="col"
-         style="max-width: 400px;">
-
-        <div class="elevation-z6 contact__container">
+<div class="container-fluid"
+     style="margin-top: 55px;">
+    <div class="row justify-content-center elevation-z6"
+         style="background: #3F51B5;">
+        <div class="col heading">
+            <h5>Let's get in touch!</h5>
             <div [innerHTML]="welcomeMessage | safeHtml"></div>
-            <div class="button__container">
-                <a type="button"
-                   class="btn btn-danger"
-                   tabindex="-1"
-                   role="button"
-                   href="mailto: kari.swarthout@gmail.com"
-                   placement="bottom"
-                   tooltip="Send me an email!"
-                   [delay]="600">
-                    <fa-icon [icon]="faPaperPlane"></fa-icon>
-                    Email
-                </a>
-                <a type="button"
-                   class="btn btn-secondary"
-                   tabindex="-1"
-                   role="button"
-                   href="https://github.com/kswarthout"
-                   target="_blank"
-                   placement="bottom"
-                   tooltip="View my GitHub profile!"
-                   [delay]="600">
-                    <fa-icon [icon]="faGithub"></fa-icon>
-                    GitHub
-                </a>
-                <a type="button"
-                   class="btn btn-primary"
-                   tabindex="-1"
-                   role="button"
-                   href="https://www.linkedin.com/in/kariswarthout/"
-                   target="_blank"
-                   placement="bottom"
-                   tooltip="Find me on LinkedIn!"
-                   [delay]="600">
-                    <fa-icon [icon]="faLinkedin"></fa-icon>
-                    LinkedIn
-                </a>
-            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-center"
+         style="margin:16px;">
+        <div class="col contact__links">
+            <a type="button"
+               class="btn btn-danger"
+               tabindex="-1"
+               role="button"
+               href="mailto: kari.swarthout@gmail.com"
+               placement="bottom"
+               tooltip="Send me an email!"
+               [delay]="600">
+                <fa-icon [icon]="faPaperPlane"></fa-icon>
+                Email
+            </a>
+            <a type="button"
+               class="btn btn-secondary"
+               tabindex="-1"
+               role="button"
+               href="https://github.com/kswarthout"
+               target="_blank"
+               placement="bottom"
+               tooltip="View my GitHub profile!"
+               [delay]="600">
+                <fa-icon [icon]="faGithub"></fa-icon>
+                GitHub
+            </a>
+            <a type="button"
+               class="btn btn-primary"
+               tabindex="-1"
+               role="button"
+               href="https://www.linkedin.com/in/kariswarthout/"
+               target="_blank"
+               placement="bottom"
+               tooltip="Find me on LinkedIn!"
+               [delay]="600">
+                <fa-icon [icon]="faLinkedin"></fa-icon>
+                LinkedIn
+            </a>
         </div>
     </div>
 </div>

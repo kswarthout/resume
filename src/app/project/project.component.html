@@ -3,14 +3,17 @@
    <div class="card-body">
       <h5 class="card-title">{{project.title}}</h5>
       <h6 class="card-subtitle mb-2 text-muted">skills: {{project.technologies}}</h6>
+      <hr>
       <p class="card-text">{{project.description}}</p>
-      <a *ngIf="project.repo"
-         href="{{project.repo}}"
-         class="card-link"
-         target="_blank">View Repo</a>
-      <a *ngIf="project.demo"
-         href="{{project.demo}}"
-         class="card-link"
-         target="_blank">View Demo</a>
+      <div class="action__container">
+         <a *ngIf="project.repo"
+            href="{{project.repo}}"
+            class="btn btn-success"
+            target="_blank">View Repo</a>
+         <a *ngIf="project.demo"
+            href="{{project.demo}}"
+            class="btn btn-primary"
+            target="_blank">View Demo</a>
+      </div>
    </div>
 </div>
