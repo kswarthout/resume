@@ -1,6 +1,6 @@
-# Resume
+# Portfolio Site
 
-Repo for my portfolio site created using Angular with Bootstrap styles. 
+I used this project to build my portfolio site using Angular and Bootstrap.
 
 ## Deployment
 Setup to be deployed to GitHub pages using angular-cli-ghpages. 
