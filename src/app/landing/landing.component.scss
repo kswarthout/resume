@@ -1,26 +1,38 @@
-#title {
-    background-color: #3B79CC;
-    color: #f7f7f7;
-}
+.welcome {
+    color: #fff;
+    max-width: 950px;
+    margin: 24px;
 
-a {
-    // color: #212529;
-    text-decoration: none;
-}
-
-.btn-group {
-    a {
-        color: #fff;
-        display: flex;
-    }
-
-    fa-icon {
-        margin-right: 6px;
+    p {
+        a {
+            color: #90ff0f;
+            font-weight: 500;
+        }
     }
 }
 
 .content__card {
     padding: 24px;
     background: white;
-    margin: 16px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    margin-left: 8px;
+    margin-right: 8px;
+    max-width: 400px;
+    min-height: 250px;
+
+    h5 {
+        color: #3f51b5;
+        font-weight: 700;
+        letter-spacing: 0.004em;
+    }
+
+    .nav_link {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+    }
 }

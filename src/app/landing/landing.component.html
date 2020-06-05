@@ -2,44 +2,74 @@
      style="padding:0;">
 
     <div class="row justify-content-center elevation-z6"
-         style="padding-top: 24px; padding-bottom: 24px; background: #3F51B5; color:#fff; margin-top: 55px;">
-        <div class="col"
-             style="max-width: 850px; margin: 24px;">
-            <h4>Hello!</h4>
-            <p style="margin: 0;">{{landingMessage}}</p>
+         style="padding-top: 24px; padding-bottom: 24px; background: #3F51B5; margin-top: 55px;">
+        <div class="col welcome">
+            <h4 style="font-size: 3em;">Hello!</h4>
+            <p>I'm Kari, a full-stack developer with a background in communication.
+                I live in Hsinchu City, Taiwan, and am working as an AP Computer Science teacher.
+                I have 3 years experience creating web, mobile and desktop applications
+                for various projects and clients.
+                I have a <a href="https://northseattle.edu/programs/bas-application-development"
+                   target="_blank">
+                    Bachelor of Applied Science in Application Development from North Seattle College
+                </a>
+                and a
+                <a href="https://murrow.wsu.edu/"
+                   target="_blank">
+                    Bachelor of Arts in Communication from Washington State University
+                </a>
+                . <br>
+                <br>
+                Currently, I'm seeking to advance my career as a Software Developer in a <span
+                      style="font-weight: 500; color: #90ff0f;">dynamic, forward-thinking</span>
+                organization, working with a team to develop, test, and deploy <span
+                      style="font-weight: 500; color: #90ff0f;">
+                    end-to-end solutions in an agile environment.
+                </span> I have a passion for web development, and am looking for a position that will allow me to
+                further my experience creating solutions for the cloud.
+                I enjoy learning new tools and techniques, and have a
+                knack for conceptualizing and delivering robust, user-friendly applications, and
+                <span style="font-weight: 500; color: #90ff0f;">I welcome any oppurtunity offering these exciting
+                    challenges.</span></p>
             <p></p>
         </div>
     </div>
 
     <div class="row justify-content-center"
          style="padding-top: 24px;">
-        <div class="col-sm-5 col-md-4 col-12 content__card elevation-z6">
-            <h5>Resume / CV</h5>
+        <div class="col-sm-5 col-md-4 col-10 content__card elevation-z6">
+            <h5>Resume</h5>
             <hr>
-            <p>Looking for a traditional resume? View online or download a pdf
-                version using the links
-                below.</p>
-            <div>
-                <a href="https://kswarthout.github.io/cv/"
+            <p>Looking for my resume? Click the link just below:</p>
+            <div class="nav_link">
+                <!-- <a href="https://kswarthout.github.io/cv/"
                    target="_blank"
                    type="button"
                    class="btn btn-outline-primary"
-                   style="margin: 8px;">View Online</a>
+                   style="margin: 8px;">View Online</a> -->
                 <a href="assets/docs/resume.pdf"
                    target="_blank"
                    type="button"
-                   class="btn btn-outline-primary"
+                   class="btn btn-success"
+                   placement="bottom"
+                   tooltip="View my resume!"
+                   [delay]="600"
                    style="margin: 8px;">View PDF</a>
             </div>
         </div>
-        <div class="col-sm-5 col-md-4 col-12 content__card elevation-z6">
+        <div class="col-sm-5 col-md-4 col-10 content__card elevation-z6">
             <h5>Projects</h5>
             <hr>
-            <p>Explore some of my previous coding projects.</p>
-            <a routerLink="/projects"
-               type="button"
-               class="btn btn-outline-primary"
-               style="margin: 8px;">View Projects</a>
+            <p>Want to see what I've built? You'll find project descriptions and repositories for my previous work by
+                following the link
+                below.</p>
+            <div class="nav_link">
+                <a routerLink="/projects"
+                   type="button"
+                   class="btn btn-success"
+                   style="margin: 8px;">View Projects</a>
+            </div>
+
         </div>
     </div>
 
