@@ -16,12 +16,14 @@ export const content = {
         {
             title: 'Time & Expense Entry Web Suite | Olympic Systems',
             description: `Rewrote a time and expense entry system converting it from a deprecated Silverlight-based implementation to the Angular framework. Along with another developer, I helped migrate existing data services to a C# Web API. I used the Angular framework to convert the frontend, and used NGXS to implement a Redux pattern for state management.`,
-            technologies: `C#, Typescript, HTML SCSS, SQL, Angular, Git / GitHub`
+            technologies: `C#, Typescript, HTML SCSS, SQL, Angular, Git / GitHub`,
+            demo: 'https://github.com/kswarthout/code_demos/blob/master/pc_te_web_suite/README.md'
         },
         {
             title: 'Reporting Utility | Olympic Systems',
             description: `Created a SQL reporting utility that integrates with Microsoft Dynamics GP and related business applications. The reports are created using DevExpress, a .NET-based component library, and are delivered using standard C# and WPF components. The app allows users to add, modify, and design reports, and store them centrally in GP’s company databases. Reports are available to users based on existing security privileges, and are viewable from web and desktop platforms.`,
             technologies: `C#, .NET, SQL, Dexterity / SanScript, XAML, Visual Source Safe`,
+            demo: 'https://github.com/kswarthout/code_demos/blob/master/pc_desktop_reporting/README.md'
         },
         {
             title: `Cloud Practicum | UST Global's Employee On-Boarding API`,
