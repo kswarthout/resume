@@ -1,13 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Pipe, PipeTransform } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
-import { EmailService } from '../services/email.service';
+@Pipe({ name: 'safeHtml' })
+export class SafeHtmlPipe implements PipeTransform {
+  constructor(private sanitizer: DomSanitizer) { }
 
-export interface Contact {
-  name: string;
-  email: string;
-  website: string;
-  phone: string;
-  message: string;
+  transform(value) {
+    return this.sanitizer.bypassSecurityTrustHtml(value);
+  }
 }
 
 @Component({
@@ -15,53 +17,16 @@ export interface Contact {
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent {
 
-  emailRequiredAlert: any = { type: 'warning', msg: `Email is required.` };
-  successAlert: any = { type: 'success', msg: `Success! Message has been sent.` };
-  errorAlert: any = { type: 'danger', msg: `Oops! Something went wrong. Message has not been sent.` };
-  public alert: any;
-  public submitMsg: string = 'Submit';
-  public isWorking: boolean = false;
-  public contact: Contact = {
-    name: '',
-    email: '',
-    website: '',
-    phone: '',
-    message: ''
-  };
+  public welcomeMessage = `<h4 style="margin-bottom: 16px;">Let's get in touch!</h4>
+                          <p>If you are interested in working with me, or want more information
+                          about my work, I would love to hear from you. You can contact me using any
+                          of the methods below:</p>`
+  public faPaperPlane = faPaperPlane;
+  public faGithub = faGithub;
+  public faLinkedin = faLinkedin;
 
-
-
-  constructor(private email: EmailService) { }
-
-  ngOnInit() {
-  }
-
-  onSubmit() {
-    if (this.contact.email === '') {
-      this.alert = this.emailRequiredAlert;
-      return;
-    }
-    this.alert = null;
-    this.isWorking = true;
-    this.submitMsg = 'Sending...';
-    this.email.sendContact(this.contact).subscribe(
-      data => {
-        this.isWorking = false;
-        this.alert = this.successAlert;
-        this.submitMsg = 'Submit';
-      },
-      error => {
-        this.isWorking = false;
-        this.alert = this.errorAlert;
-        this.submitMsg = 'Submit';
-      }
-    )
-  }
-
-  onAlertClosed(): void {
-    this.alert = null;
-  }
+  constructor() { }
 
 }

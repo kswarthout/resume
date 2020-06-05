@@ -10,7 +10,7 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ContactComponent } from './contact/contact.component';
+import { ContactComponent, SafeHtmlPipe } from './contact/contact.component';
 import { LandingComponent } from './landing/landing.component';
 import { ProjectComponent } from './project/project.component';
 import { ProjectsComponent } from './projects/projects.component';
@@ -21,7 +21,8 @@ import { ProjectsComponent } from './projects/projects.component';
     ProjectsComponent,
     ContactComponent,
     LandingComponent,
-    ProjectComponent
+    ProjectComponent,
+    SafeHtmlPipe
   ],
   imports: [
     BrowserModule,
@@ -34,7 +35,7 @@ import { ProjectsComponent } from './projects/projects.component';
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [SafeHtmlPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

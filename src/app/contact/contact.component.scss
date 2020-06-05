@@ -1,8 +1,16 @@
-.ng-valid[required],
-.ng-valid.required {
-    border-left: 5px solid #42A948;
-}
+.contact__container {
+    background: #fff;
+    border-radius: 5px;
+    padding: 16px;
 
-.ng-invalid:not(form) {
-    border-left: 5px solid #a94442;
+    .button__container {
+        display: flex;
+        flex-direction: column;
+
+        a {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 15px;
+        }
+    }
 }

@@ -1,77 +1,47 @@
 <div class="row justify-content-center align-items-center"
-     style="margin:16px; margin-top: 105px;">
+     style="margin:16px; margin-top: 150px;">
     <div class="col"
          style="max-width: 400px;">
-        <alert *ngIf="alert"
-               [type]="alert.type"
-               [dismissible]="true"
-               (onClosed)="onAlertClosed()">{{ alert.msg }}</alert>
-        <h4 style="margin-bottom: 16px;">Let's get in touch!</h4>
-        <form class="elevation-z6"
-              style="background: #fff; border-radius: 5px; padding: 16px;">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text"
-                       class="form-control"
-                       id="name"
-                       [ngModelOptions]="{standalone: true}"
-                       [(ngModel)]="contact.name"
-                       [disabled]="isWorking">
-            </div>
-            <div class="form-group">
-                <label for="email">Email *</label>
-                <input type="email"
-                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-                       class="form-control"
-                       id="email"
-                       [ngModelOptions]="{standalone: true}"
-                       [(ngModel)]="contact.email"
-                       required
-                       #email="ngModel"
-                       [disabled]="isWorking">
-                <div [hidden]="email.valid || email.pristine || !email.touched || isWorking"
-                     class="alert alert-danger">
-                    Email is invalid
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="website">Website</label>
-                <input type="text"
-                       class="form-control"
-                       id="website"
-                       [ngModelOptions]="{standalone: true}"
-                       [(ngModel)]="contact.website"
-                       [disabled]="isWorking">
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone</label>
-                <input type="text"
-                       class="form-control"
-                       id="phone"
-                       [ngModelOptions]="{standalone: true}"
-                       [(ngModel)]="contact.phone"
-                       [disabled]="isWorking">
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea class="form-control"
-                          id="message"
-                          [ngModelOptions]="{standalone: true}"
-                          [(ngModel)]="contact.message"
-                          [disabled]="isWorking">
 
-                   </textarea>
+        <div class="elevation-z6 contact__container">
+            <div [innerHTML]="welcomeMessage | safeHtml"></div>
+            <div class="button__container">
+                <a type="button"
+                   class="btn btn-danger"
+                   tabindex="-1"
+                   role="button"
+                   href="mailto: kari.swarthout@gmail.com"
+                   placement="bottom"
+                   tooltip="Send me an email!"
+                   [delay]="600">
+                    <fa-icon [icon]="faPaperPlane"></fa-icon>
+                    Email
+                </a>
+                <a type="button"
+                   class="btn btn-secondary"
+                   tabindex="-1"
+                   role="button"
+                   href="https://github.com/kswarthout"
+                   target="_blank"
+                   placement="bottom"
+                   tooltip="View my GitHub profile!"
+                   [delay]="600">
+                    <fa-icon [icon]="faGithub"></fa-icon>
+                    GitHub
+                </a>
+                <a type="button"
+                   class="btn btn-primary"
+                   tabindex="-1"
+                   role="button"
+                   href="https://www.linkedin.com/in/kariswarthout/"
+                   target="_blank"
+                   placement="bottom"
+                   tooltip="Find me on LinkedIn!"
+                   [delay]="600">
+                    <fa-icon [icon]="faLinkedin"></fa-icon>
+                    LinkedIn
+                </a>
             </div>
-            <button type="submit"
-                    class="btn btn-danger"
-                    (click)="onSubmit()"
-                    [disabled]="isWorking">
-                <span *ngIf="isWorking"
-                      class="spinner-border spinner-border-sm"
-                      role="status"
-                      aria-hidden="true"></span>
-                {{submitMsg}}
-            </button>
-        </form>
+        </div>
     </div>
 </div>
