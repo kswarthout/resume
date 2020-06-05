@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faBriefcase, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-landing',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
+  public portfolioIcon = faBriefcase;
+  public resumeIcon = faFilePdf;
   public landingMessage: string = `<p>I'm Kari, a full-stack developer currently located in Hsinchu City, Taiwan. 
                                   I create web, mobile and desktop applications. 
                                   I have a <a href="https://northseattle.edu/programs/bas-application-development" target="_blank">

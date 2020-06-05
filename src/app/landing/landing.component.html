@@ -38,9 +38,12 @@
     <div class="row justify-content-center"
          style="padding-top: 24px;">
         <div class="col-sm-5 col-md-4 col-10 content__card elevation-z6">
-            <h5>Resume</h5>
+            <h5>
+                <fa-icon [icon]="resumeIcon"
+                         style="margin-right:10px;"></fa-icon>Resume
+            </h5>
             <hr>
-            <p>Looking for my resume? Click the link just below:</p>
+            <p>Looking for my resume? Click the link below for the PDF version:</p>
             <div class="nav_link">
                 <!-- <a href="https://kswarthout.github.io/cv/"
                    target="_blank"
@@ -51,23 +54,23 @@
                    target="_blank"
                    type="button"
                    class="btn btn-success"
-                   placement="bottom"
-                   tooltip="View my resume!"
-                   [delay]="600"
                    style="margin: 8px;">View PDF</a>
             </div>
         </div>
         <div class="col-sm-5 col-md-4 col-10 content__card elevation-z6">
-            <h5>Projects</h5>
+            <h5>
+                <fa-icon [icon]="portfolioIcon"
+                         style="margin-right:10px;"></fa-icon>Portfolio
+            </h5>
             <hr>
             <p>Want to see what I've built? You'll find project descriptions and repositories for my previous work by
                 following the link
-                below.</p>
+                below:</p>
             <div class="nav_link">
                 <a routerLink="/projects"
                    type="button"
                    class="btn btn-success"
-                   style="margin: 8px;">View Projects</a>
+                   style="margin: 8px;">View My Work</a>
             </div>
 
         </div>
