@@ -14,6 +14,7 @@ import { ContactComponent, SafeHtmlPipe } from './contact/contact.component';
 import { LandingComponent } from './landing/landing.component';
 import { ProjectComponent } from './project/project.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProjectsComponent } from './projects/projects.component';
     ContactComponent,
     LandingComponent,
     ProjectComponent,
-    SafeHtmlPipe
+    SafeHtmlPipe,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
