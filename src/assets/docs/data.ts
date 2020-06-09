@@ -2,7 +2,7 @@ export const content = {
     projects: [
         {
             title: 'Sudoku API | HAS HSCS',
-            description: `A simple API written in GO used by students in my high school CS class for their Sudoku project. The API includes just one endpoint that can be called to receive uniquely generated Sudoku puzzles.`,
+            description: `A simple API written in Go used by students in my high school CS class for their Sudoku project. The API includes just one endpoint that can be called to receive uniquely generated Sudoku puzzles with puzzle start and solution encoded as strings in the JSON response.`,
             technologies: `Go, Heroku, Git / GitHub`,
             repo: 'https://github.com/kswarthout/sudoku-api',
             demo: 'https://desolate-shelf-37913.herokuapp.com/puzzle'

@@ -6,9 +6,11 @@ import { LandingComponent } from './landing/landing.component';
 import { ProjectsComponent } from './projects/projects.component';
 
 const routes: Routes = [
-  { path: '', component: LandingComponent },
+  { path: '', redirectTo: '/main', pathMatch: 'full' },
+  { path: 'main', component: LandingComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'contact', component: ContactComponent },
+  { path: '**', component: LandingComponent },
   // { path: 'about', component: AboutComponent }
 ];
 
