@@ -1,6 +1,13 @@
 export const content = {
     projects: [
         {
+            title: 'Sudoku API | HAS HSCS',
+            description: `A simple API written in GO used by students in my high school CS class for their Sudoku project. The API includes just one endpoint that can be called to receive uniquely generated Sudoku puzzles.`,
+            technologies: `Go, Heroku, Git / GitHub`,
+            repo: 'https://github.com/kswarthout/sudoku-api',
+            demo: 'https://desolate-shelf-37913.herokuapp.com/puzzle'
+        },
+        {
             title: 'Recipe Management Web App | Dav Cooks',
             description: `I am currently developing a recipe management web application using the Angular framework for the frontend, and Google Firebase for the backend. The design for this app is inspired by my father, who requested an app that would allow him to store all his recipes in one place. A work still in progress, when complete user’s will be able to authenticate using an email and password, or existing social account. The app will allow users to enter new recipes, then view or share with friends.`,
             technologies: `Typescript, HTML / SCSS, Firebase, Git / GitHub`,
