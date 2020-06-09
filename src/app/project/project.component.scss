@@ -1,5 +1,14 @@
+@import '../../styles.scss';
+@import '../../assets/styles/elevation.scss';
+
+.card {
+    @include mat-elevation(15);
+    height: 375px;
+}
+
 .card-body {
     padding: 36px;
+    overflow: hidden;
 
     h5 {
         text-transform: uppercase;
@@ -15,6 +24,14 @@
         font-weight: 400;
         text-transform: capitalize;
     }
+}
+
+.card-text {
+    font-size: .9em;
+    height: 120px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include scrollbars(10px, #b9b9b9, #f1f1f1);
 }
 
 .action__container {

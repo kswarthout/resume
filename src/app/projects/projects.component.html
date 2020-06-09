@@ -3,10 +3,11 @@
     <div class="row justify-content-center elevation-z6"
          style="background: #3F51B5;">
         <div class="col heading">
-            <h5>Explore what I've been working on...</h5>
+            <h5>Here's what I've been working on...</h5>
         </div>
     </div>
-    <div class="row">
+    <div class="row"
+         style="margin-top: 24px;">
         <div *ngFor="let p of projects"
              class="col-12 col-sm-6 col-md-4">
             <app-project [project]="p"></app-project>

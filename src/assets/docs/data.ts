@@ -1,26 +1,6 @@
 export const content = {
     projects: [
         {
-            title: 'Sudoku API | HAS HSCS',
-            description: `A simple API written in Go used by students in my high school CS class for their Sudoku project. The API includes just one endpoint that can be called to receive uniquely generated Sudoku puzzles with puzzle start and solution encoded as strings in the JSON response.`,
-            technologies: `Go, Heroku, Git / GitHub`,
-            repo: 'https://github.com/kswarthout/sudoku-api',
-            demo: 'https://desolate-shelf-37913.herokuapp.com/puzzle'
-        },
-        {
-            title: 'Recipe Management Web App | Dav Cooks',
-            description: `I am currently developing a recipe management web application using the Angular framework for the frontend, and Google Firebase for the backend. The design for this app is inspired by my father, who requested an app that would allow him to store all his recipes in one place. A work still in progress, when complete user’s will be able to authenticate using an email and password, or existing social account. The app will allow users to enter new recipes, then view or share with friends.`,
-            technologies: `Typescript, HTML / SCSS, Firebase, Git / GitHub`,
-            repo: 'https://github.com/kswarthout/dav-cooks',
-            demo: 'https://kswarthout.github.io/dav-cooks/'
-        },
-        {
-            title: 'Resume Website',
-            description: `View the repo for this site! I built this site using the Angular framework, and used Node.js to create an email service. I'm currently using it to showcase my resume and portfolio.`,
-            technologies: `Typescript, HTML / SCSS, Firebase, Git / GitHub`,
-            repo: 'https://github.com/kswarthout/resume'
-        },
-        {
             title: 'Time & Expense Entry Web Suite | Olympic Systems',
             description: `Rewrote a time and expense entry system converting it from a deprecated Silverlight-based implementation to the Angular framework. Along with another developer, I helped migrate existing data services to a C# Web API. I used the Angular framework to convert the frontend, and used NGXS to implement a Redux pattern for state management.`,
             technologies: `C#, Typescript, HTML SCSS, SQL, Angular, Git / GitHub`,
@@ -31,6 +11,26 @@ export const content = {
             description: `Created a SQL reporting utility that integrates with Microsoft Dynamics GP and related business applications. The reports are created using DevExpress, a .NET-based component library, and are delivered using standard C# and WPF components. The app allows users to add, modify, and design reports, and store them centrally in GP’s company databases. Reports are available to users based on existing security privileges, and are viewable from web and desktop platforms.`,
             technologies: `C#, .NET, SQL, Dexterity / SanScript, XAML, Visual Source Safe`,
             demo: 'https://github.com/kswarthout/code_demos/blob/master/pc_desktop_reporting/README.md'
+        },
+        {
+            title: 'Sudoku API | HAS HSCS',
+            description: `A simple API written in Go used by students in my high school CS class for their Sudoku project. The API includes just one endpoint that can be called to receive uniquely generated Sudoku puzzles with puzzle start and solution encoded as strings in the JSON response.`,
+            technologies: `Go, Heroku, Git / GitHub`,
+            repo: 'https://github.com/kswarthout/sudoku-api',
+            demo: 'https://desolate-shelf-37913.herokuapp.com/puzzle'
+        },
+        {
+            title: 'Recipe Web App | Dav Cooks',
+            description: `I am currently developing a recipe management web application using the Angular framework for the frontend, and Google Firebase for the backend. The design for this app is inspired by my father, who requested an app that would allow him to store all his recipes in one place. A work still in progress, when complete user’s will be able to authenticate using an email and password, or existing social account. The app will allow users to enter new recipes, then view or share with friends.`,
+            technologies: `Typescript, HTML / SCSS, Firebase, Git / GitHub`,
+            repo: 'https://github.com/kswarthout/dav-cooks',
+            demo: 'https://kswarthout.github.io/dav-cooks/'
+        },
+        {
+            title: 'Resume Website',
+            description: `View the repo for this site! I built this site using the Angular framework, and used Node.js to create an email service. I'm currently using it to showcase my resume and portfolio.`,
+            technologies: `Typescript, HTML / SCSS, Firebase, Git / GitHub`,
+            repo: 'https://github.com/kswarthout/resume'
         },
         {
             title: `Cloud Practicum | UST Global's Employee On-Boarding API`,

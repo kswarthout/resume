@@ -1,19 +1,21 @@
-<div class="card elevation-z6"
+<div class="card "
      style="margin:8px;">
    <div class="card-body">
-      <h5 class="card-title">{{project.title}}</h5>
-      <h6 class="card-subtitle mb-2 text-muted">skills: {{project.technologies}}</h6>
+      <div>
+         <h5 class="card-title">{{project.title}}</h5>
+         <h6 class="card-subtitle mb-2 text-muted">skills: {{project.technologies}}</h6>
+      </div>
       <hr>
       <p class="card-text">{{project.description}}</p>
       <div class="action__container">
          <a *ngIf="project.repo"
             href="{{project.repo}}"
             class="btn btn-success"
-            target="_blank">View Repo</a>
+            target="_blank">Repo</a>
          <a *ngIf="project.demo"
             href="{{project.demo}}"
             class="btn btn-primary"
-            target="_blank">View Demo</a>
+            target="_blank">Demo</a>
       </div>
    </div>
 </div>
